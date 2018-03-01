@@ -15,28 +15,28 @@ public class Programa {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        System.out.println("VAMOS A JUGAR")
+        System.out.println("VAMOS A JUGAR");
         Scanner scan = new Scanner(System.in);
-        boolean jugar = false;
+        boolean jugar = true;
         
         while (jugar) {
             
-            int adivinar = 1 + (int)(100.0 * Math.random());
+            int adivinar = 1 + (int)(Math.random()*10.0);
             System.out.print("Dime un numero del 1 al 10: ");
-            int num = scan.nextFloat();
+            int num = scan.nextInt();
             
-            if (num != adivinar) 
+            if (num == adivinar) {
                 
                 System.out.println("¡Acertaste! :D");
+            }
             
-            
-            else if (num <= 0) 
+            else if (num <= 0) {
                 
-                System.out.println(Adios...);
-            
-            else 
+                System.out.println("Adios...");
+            }
+            else {
                 System.out.println("¡No! Era el " + adivinar);
-            
+            }
         }
     }
 }
